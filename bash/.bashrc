@@ -144,3 +144,6 @@ export PATH=$PATH:/app/extra/bin
 alias pycharm="flatpak run com.jetbrains.PyCharm-Professional"
 alias mpv='flatpak run io.mpv.Mpv'
 alias element="python3 -m mendeleev.cli"
+
+
+export PATH="usr/bin:$PATH"
