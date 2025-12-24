@@ -118,14 +118,14 @@ fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/kantxa/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('$HOME/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/kantxa/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/kantxa/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/kantxa/anaconda3/bin:$PATH"
+        export PATH="$HOME/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -136,7 +136,7 @@ unset __conda_setup
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 
-export PATH="$PATH/home/kantxa/idea-IU-251.23774.435/bin"
+export PATH="$PATH:$HOME/idea-IU-251.23774.435/bin"
 
 eval "$(zoxide init bash)"
 export PATH=$PATH:/usr/bin/tesseract
@@ -147,3 +147,6 @@ alias element="python3 -m mendeleev.cli"
 
 
 export PATH="usr/bin:$PATH"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

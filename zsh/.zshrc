@@ -79,9 +79,13 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Zoxide başlatma komutu (Path'e ekleyerek)
 export PATH=$PATH:$HOME/.local/bin
+unalias zi 
 eval "$(zoxide init zsh)"
 
 
 
 
 
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
