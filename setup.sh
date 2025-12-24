@@ -50,6 +50,22 @@ if [ -d "bash" ]; then
 fi
 
 # Eğer ileride 'tmux', 'mpv' gibi klasörler açarsanız buraya ekleyebilirsiniz:
+
+# setup.sh içine eklenecek/güncellenecek kısım:
+
+# 'mpv' klasörü var mı kontrol et
+if [ -d "mpv" ]; then
+    echo -e "${GREEN}>>> MPV ayarları yükleniyor...${NC}"
+    
+    # Hedefte gerçek bir klasör varsa stow hata verir, onu kaldır.
+    if [ -d "$HOME/.config/mpv" ] && [ ! -L "$HOME/.config/mpv" ]; then
+        echo "Mevcut MPV klasörü yedeğe alınıyor..."
+        mv "$HOME/.config/mpv" "$HOME/.config/mpv.backup.$(date +%s)"
+    fi
+
+    stow -R mpv
+fi
+
 # stow -v tmux
 # stow -v mpv
 
